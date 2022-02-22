@@ -1,11 +1,9 @@
-
-
 from django.db import models
 
 # Create your models here.
-class Product(models.Model):
+class Ticket(models.Model):
     name = models.CharField(max_length=100)
-    price = models.IntegerField()
+    discription = models.CharField(max_length=500)
 
     class Meta:
-        db_table = 'product'
+        db_table = 'ticket'
