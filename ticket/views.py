@@ -1,12 +1,11 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.views.generic.edit import CreateView
+from .models import Ticket
 
 # Create your views here.
-def add(request):
-    print("addticket app ")
-    return HttpResponse("add ticket called..")
-
-def view(request):
-    return HttpResponse("view ticket called..")
-def mainpage(request):
-    return render(request, 'ticket/mainpage.html')
+class CreateTicket(CreateView):
+    model = Ticket
+    fields = ['ticket_title', 'ticket_description']
+    template_name = 'ticket/create_ticket.html'
+    success_url = '/ticket/view/'
+    

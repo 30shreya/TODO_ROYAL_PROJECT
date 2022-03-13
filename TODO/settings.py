@@ -38,7 +38,15 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'product',
+    'employee',
+    'cart',
+    'simpleform',
+    'cbv',
+    'Task',
     'ticket',
+    
+    
+    
 ]
 
 MIDDLEWARE = [

@@ -1,11 +1,10 @@
-from django.contrib import admin
-from django.urls import include, path
-from ticket import views
+from django.urls import include,path
+from .views import CreateTicket
+
 
 urlpatterns = [
-    path('add/',views.add),
-    path('view/',views.view),
-    path('page/',views.mainpage),
+    
+    path('add/',CreateTicket.as_view()),
+    #path('view/' ),
+    
 ]
-   
-

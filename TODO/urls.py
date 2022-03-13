@@ -20,7 +20,17 @@ from django.urls import include, path
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('product/',include('product.urls')),
-    path('ticket/',include('ticket.urls')),
+    path('employee/',include('employee.urls')),
+    path('cart/',include('cart.urls')),
+    path('simpleform/',include('simpleform.urls')),
+    path('cbv/',include('cbv.urls')),
+    path('task/',include('Task.urls')),
+    path('ticket/' ,include('ticket.urls')),
+    
+    
+
+    
+
 
 
 ]
