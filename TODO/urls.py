@@ -26,6 +26,9 @@ urlpatterns = [
     path('cbv/',include('cbv.urls')),
     path('task/',include('Task.urls')),
     path('ticket/' ,include('ticket.urls')),
+    path('sendmail/' ,include('sendmail.urls')),
+    path('core/' ,include('core.urls')),
+    path('' ,include('authentication.urls')),
     
     
 

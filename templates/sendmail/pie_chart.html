@@ -1,0 +1,27 @@
+{% block content %}
+<div id="container" style="width: 75%;">
+    <canvas id="pie_chart"></canvas>
+</div>
+
+<script src="https://cdn.jsdlivr.net/npm/chart/.js@2.9.3/dist/chart.min.js"></script>
+<script>
+
+    var config = {
+        type: 'pie'
+        data: {
+            datasets: [{
+                data: {{data|safe}},
+                backgroundColor: [
+                    '#696969', '#808080', '#A9A9A9', '#C0C0C0', '#D3D3D3'
+                ],
+                label: 'Population'
+            }],
+            labels: {{ labels|safe }}
+        },
+        options: {
+            responsive: true
+        }
+    };
+</script>
+{% endblock %}    
+     
